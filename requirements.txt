@@ -2,3 +2,4 @@ python-telegram-bot==20.3
 aiohttp==3.9.5
 certifi
 requests
+Pillow
