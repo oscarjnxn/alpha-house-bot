@@ -13,11 +13,10 @@ from telegram.ext import (
     ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 )
 
-# ---------------- CONFIG ----------------
-BOT_TOKEN = os.getenv("BOT_TOKEN")
+# ----------------
+BOT_TOKEN = os.environ.get("REPLIT_BOT_TOKEN")
 if not BOT_TOKEN:
     raise ValueError("Please set BOT_TOKEN env var in Replit secrets.")
-
 DATA_FILE = "tracked.json"
 WATERMARK_TEXT = "The Alpha House"
 CARD_WIDTH = 900
